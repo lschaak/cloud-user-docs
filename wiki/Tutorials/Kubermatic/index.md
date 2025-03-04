@@ -6,7 +6,7 @@ Contact us via mail in case you need further assistence: <denbi-cloud@bih-charit
 
 ## Get helm and kubectl going on the jumphost (with your user) 
 
-The configuration and cluster management via terminal commands is done from jumphost-01.denbi.bihealth.org. In order to configure the cluster you first need to setup the environment in the jumphost with your Elixir user. So connect to the jumphost via ssh. When the cluster is all setup you can download the configuration file from Kubermatic to actially connect to the cluster. We will come back to this later. For now issue the following commands in your home directory. 
+The configuration and cluster management via terminal commands is done from denbi-jumphost-01.bihealth.org. In order to configure the cluster you first need to setup the environment in the jumphost with your Elixir user. So connect to the jumphost via ssh. When the cluster is all setup you can download the configuration file from Kubermatic to actually connect to the cluster. We will come back to this later. For now issue the following commands in the home directory of the jumphost. 
 
 ```bash
 mkdir ~/.kube
@@ -31,11 +31,11 @@ In order to create a kubernetes cluster in your OpenStack project you need the a
 
 When you have the application credentials, it makes sense to upload a SSH key to your Kubermatic project. With that, you have the ability to access the K8s nodes created in a later step via ssh.
 
-![image](img/01-create_cluster.png)
+![image](img/02-add_ssh_key.png)
 
 Continue to create your K8s cluster:
 
-![image](img/02-add_ssh_key.png)
+![image](img/01-create_cluster.png)
 
 Select the cloudprovider (there is only OpenStack available):
 
